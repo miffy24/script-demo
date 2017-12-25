@@ -1,5 +1,9 @@
 #!/usr/bin/env node
  var fs = require('fs')
+if (fs.existsSync()) {
+    console.log('error: dir exists')
+    process.exit(1)
+} else {
  var dirName = process.argv[2] // 你传的参数是从第 2 个开始的
  process.chdir("/Users/chen/Desktop") // cd ~/Desktop
  fs.mkdirSync("./" + dirName) // mkdir $1
@@ -11,3 +15,4 @@
  fs.writeFileSync("./js/main.js", 'var string = \"Hello World"\nalert(string)')
 
  process.exit(0)
+}
