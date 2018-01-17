@@ -5,7 +5,7 @@ if (fs.existsSync()) {
     process.exit(1)
 } else {
  var dirName = process.argv[2] // 你传的参数是从第 2 个开始的
- process.chdir("/Users/chen/Desktop") // cd ~/Desktop
+ process.chdir("/Users/chen/") // cd ~/
  fs.mkdirSync("./" + dirName) // mkdir $1
  process.chdir("./" + dirName) // cd $1
  fs.mkdirSync('css') // mkdir css
